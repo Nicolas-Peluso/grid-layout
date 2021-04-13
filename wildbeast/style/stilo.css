@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'italic-vol';
+    src: url('../FONT/Vollkorn/Vollkorn_italic.ttf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'normal-vol';
+    src: url(../FONT/Vollkorn/Vollkorn-VariableFont_wght.ttf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'numero';
+    src: url(../FONT/stohr_numbers/Stoehr\ Numbers.ttf);
+    font-weight: normal;
+}
+*{
+    font-family: 'normal-vol';
+    margin: 0px;
+    padding: 0%;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+
+}
+p{
+    font-size: 1.5em;
+}
+.container{
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "aside  conteudo anuncio"
+    "footer footer footer"
+    ;   
+    
+}
+.header{
+    grid-area: header;
+    background: linear-gradient(135deg, #8844ee, #b07dfb);
+    display: grid;
+    grid-template-columns: minmax(100px 1fr) 1fr;
+    padding: 0px;
+    align-items: center;
+}
+.header > img{
+    width: 250px;
+    margin: 15px;
+}
+.header > ul{
+    padding-bottom: 20px;
+    margin-left: auto;
+    list-style-type: none;
+}
+.header li{
+    display: inline;
+    padding-left: 10px;
+    
+}
+.header ul li a{
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: rgba(148, 72, 247, 0.445);
+
+    
+
+}
+.header ul li a:hover{
+    background-color: rgb(152, 73, 255);
+
+}
+.aside{
+    grid-area: aside;
+    background-color: #FAFBFC;
+    padding-right: 120px;
+    margin-left: 50px;
+}
+.aside img{
+    background-color: rgb(255, 255, 255);
+    width: 90px;
+    display: block;
+    margin: 21px auto;
+    box-shadow: 1px 0.1px 5px rgba(0, 0, 0, 0.342);
+}
+.aside img:hover{
+    background-color: #af7dfb98;
+}
+.conteudo{
+    margin: 0px auto;
+    grid-area: conteudo;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.514);
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 900px;
+    grid-template-rows: auto auto 150px;
+
+}
+/*essas duas barras servem para dizer 
+que o item vai se expandir pelas colunas 
+from  /  to  
+ou seja da 1 para a -1 (-1 quer dizer expanda o maxixo)
+*/
+.ocupa2colunas{
+    grid-column: 1 / -1;
+}
+
+.f{
+    grid-column: 2;
+    grid-row: 3;
+    color: rgb(255, 0, 255);
+    font-weight: 1;
+    font-style: italic;
+    line-height: 29px;
+}
+.lobo2{
+    grid-column: 2 ;
+    grid-row: 4;
+}
+.abaixo_lobo2{
+    grid-column: 2;
+    grid-row: 5;
+}
+.abaixo_lobo1{
+    grid-row: 5;
+}
+.ROXO{
+    background: linear-gradient(30deg,#8844ee, #b07dfb) ;
+    font-size: 1.5em;
+    font-family: italic-vol;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.842);
+}
+.roxo_mono{
+    background: linear-gradient(130deg,#976adb, #b07dfb);
+    font-family: monospace;
+    letter-spacing: 2px;
+    font-size: 1.8em;   
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px black;
+
+}
+.roxo_mono ul{
+    list-style-type: none;
+    padding-top: 15px;
+}
+.roxo_mono ul li{
+    padding-bottom: 10px;
+}
+.span h1{
+    color: rgb(195, 0, 255);
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+.span p{
+    color: blueviolet;
+    font-size: 1.2em;
+}
+footer{
+    grid-area: footer;
+    background: linear-gradient(130deg, #8844ee, #b07dfb);
+    padding-bottom: 150px;
+    text-align: center;
+}
+.anuncios{
+    grid-area: anuncio;
+    width: 50%;
+    margin-left: 150px; 
+}
+
+
